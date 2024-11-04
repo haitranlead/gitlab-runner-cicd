@@ -1,0 +1,9 @@
+services:
+  gitlab-runner-cicd:
+    image: ${DOCKER_REGISTRY-}gitlabrunnercicd
+    build:
+      context: .
+      dockerfile: gitlab-runner-cicd/Dockerfile
+    ports:
+    - 8080:8080
+    - 8081:8081
